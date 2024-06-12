@@ -32,10 +32,9 @@ export default function Home() {
           <h1 className="text-2xl md:text-4xl  font-bold mb-4">Coming Soon</h1>
           <p className="mb-4 text-sm md:text-lg flex flex-col text-center text-gray-500">
             <span>
-              Are you Ready to get something new from us. Then subscribe the
-              news
+            Transform Your Startup or Company Operations with SmartWorka.
             </span>
-            <span>latter to get latest updates?</span>
+            <span>Get on the List Today!</span>
           </p>
           <div className="flex flex-col gap-2 md:gap-0 md:flex-row justify-center">
             <input
