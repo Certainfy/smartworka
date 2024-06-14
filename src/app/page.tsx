@@ -20,6 +20,14 @@ const labelImg = [
     id:4,
     image: '/img-4.png'
   },
+  {
+    id:5,
+    image: '/img-5.png'
+  },
+  {
+    id:6,
+    image: '/img-6.png'
+  },
 ]
 
 export default function Home() {
