@@ -34,17 +34,13 @@ const labelImg = [
   {
     id: 8,
     image: "/img-9.png",
-  },
-  {
-    id: 9,
-    image: "/img-11.png",
   }
 ];
 
 export default function Home() {
   return (
     <section>
-      <header className="h-full bg-[#051537] flex flex-col gap-8 items-center py-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
+      <header className="h-full bg-[#051537] flex flex-col gap-10 items-center py-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
         <Button className="h-6 rounded-full text-sm bg-blue-600 hover:bg-blue-700">
           <strong className="mr-2">NEW</strong> Learn how AI can help alleviate
           the CPA talent crisis <MoveRight className="ml-2 h-4 w-4" />{" "}
@@ -76,7 +72,7 @@ export default function Home() {
           Top 500 firms trust Smartworka to improve efficiency, revenue, and
           client experiences.
         </p>
-        <figure className="flex items-center justify-between px-12">
+        <figure className="flex items-center gap-12">
          {labelImg.map((data:any) => (
            <img src={data.image} alt="logos"/>
          ))}
