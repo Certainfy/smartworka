@@ -5,7 +5,7 @@ import { MoveRight } from "lucide-react";
 export default function Home() {
   return (
     <section>
-      <header className="h-screen bg-[#051537] flex flex-col gap-8 items-center py-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-center">
+      <header className="h-full bg-[#051537] flex flex-col gap-8 items-center py-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
         <Button className="h-6 rounded-full text-sm bg-blue-600 hover:bg-blue-700">
           <strong className="mr-2">NEW</strong> Learn how AI can help alleviate
           the CPA talent crisis <MoveRight className="ml-2 h-4 w-4" />{" "}
@@ -24,6 +24,9 @@ export default function Home() {
           </Button>
         </div>
         <p className="text-md text-white">No credit card needed ✦ Unlimited time on Free plan</p>
+        <figure className="py-8">
+        <img src="/dasboard-frame.png" alt="" />
+        </figure>
       </header>
     </section>
   );

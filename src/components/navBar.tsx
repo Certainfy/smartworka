@@ -8,7 +8,7 @@ export default function NavBar() {
     <div>
       <nav className="flex flex-row justify-between items-center py-6 px-6">
         <div className="flex gap-12 items-center">
-        <img src="/Smartworka.svg" alt="" />
+        <img src="/Smartworka.svg" alt="logo" />
         <ul className="space-x-4 text-gray-400 text-base">
           <Link href="">About</Link>
           <Link href="">Features</Link>
