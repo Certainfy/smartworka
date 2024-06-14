@@ -2,6 +2,18 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 
+
+const labelImg = [
+  {
+    id:1,
+    image: '/img-1.png'
+  },
+  {
+    id:2,
+    image: '/img-2.png'
+  },
+]
+
 export default function Home() {
   return (
     <section>
@@ -27,6 +39,8 @@ export default function Home() {
         <figure className="py-8">
         <img src="/dasboard-frame.png" alt="" />
         </figure>
+        <p className="text-md text-white">Top 500 firms trust Smartworka to improve efficiency, revenue, and client experiences.</p>
+        <figure></figure>
       </header>
     </section>
   );
