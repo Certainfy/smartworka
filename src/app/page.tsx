@@ -37,10 +37,6 @@ const labelImg = [
   },
   {
     id: 9,
-    image: "/img-10.png",
-  },
-  {
-    id: 10,
     image: "/img-11.png",
   }
 ];
@@ -80,7 +76,11 @@ export default function Home() {
           Top 500 firms trust Smartworka to improve efficiency, revenue, and
           client experiences.
         </p>
-        <figure></figure>
+        <figure className="flex items-center justify-between px-12">
+         {labelImg.map((data:any) => (
+           <img src={data.image} alt="logos"/>
+         ))}
+        </figure>
       </header>
     </section>
   );
