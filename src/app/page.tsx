@@ -131,28 +131,28 @@ export default function Home() {
             <p>Small & Big Companies</p>
           </article>
         </section>
-        <section className="h-full bg-[#051537] flex flex-col items-center pt-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-top px-12">
+        <section className="h-full bg-[#051537] flex flex-col items-center mt-12 py-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-top px-12">
           <article className="text-white text-center space-y-4">
             <h1 className="text-6xl font-medium">
               Built by and for practitioners
             </h1>
             <p>Smartworka is built to power the firm of the future.</p>
           </article>
-          <section className="flex flex-row gap-10 items-center">
+          <section className="flex flex-row gap-10 items-center pt-12">
             <section>
               <article className="text-white space-y-2">
                 <p>PRODUCTS</p>
-                <h1 className="w-full text-4xl font-medium md:w-3/5 mx-auto md:mx-0">
+                <h1 className="w-full text-4xl font-medium md:w-[525px] mx-auto md:mx-0">
                   Grow your business with the Smartworka Platform for project
                   management
                 </h1>
-                <p className="w-full text-base md:w-1/2 md:mx-0">
+                <p className="w-full text-base md:w-[500px] md:mx-0">
                   Smartworka increases margins, revenue, and client satisfaction
                   across all advisory and audit engagements.
                 </p>
               </article>
               <section className="pt-8 text-white">
-                <article className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <article className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
                   <div>
                     <h3 className="font-bold">Smartworka</h3>
                     <p>Award-winning platform built for advisory & audit</p>
@@ -183,7 +183,7 @@ export default function Home() {
               </section>
             </section>
             <section>
-              <img src="/section-7.png" alt="section" />
+              <img src="/section-7.png" className="w-full md:w-[500px] object-contain" alt="section" />
             </section>
           </section>
         </section>
