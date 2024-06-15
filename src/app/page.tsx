@@ -112,6 +112,20 @@ export default function Home() {
         </ul>
       </article>
     </section>
+    <section className="flex items-center justify-around mt-12">
+     <article className="text-center">
+      <p className=" text-blue-600 text-4xl">200</p>
+      <p>Countries Worldwide</p>
+     </article>
+     <article className="text-center">
+      <p className=" text-blue-600 text-4xl">156k</p>
+      <p>Registered Users</p>
+     </article>
+     <article className="text-center">
+      <p className=" text-blue-600 text-4xl">23k</p>
+      <p>Small & Big Companies</p>
+     </article>
+    </section>
   </main>
 </>
 
