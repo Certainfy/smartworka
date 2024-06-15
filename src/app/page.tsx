@@ -89,7 +89,7 @@ export default function Home() {
           </figure>
           <article className="space-y-2">
             <p className=" text-yellow-400">Business Tools</p>
-            <h1 className="text-xl font-bold">Useful Features</h1>
+            <h1 className="text-2xl font-bold">Useful Features</h1>
             <h3 className="text-xl text-blue-500">Team Management</h3>
             <p className=" w-3/5">
               The point of using smartworka is that it has a more-or-less normal
