@@ -126,6 +126,20 @@ export default function Home() {
       <p>Small & Big Companies</p>
      </article>
     </section>
+    <section className="h-full bg-[#051537] flex flex-row gap-10 items-center py-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
+      <section>
+      <article>
+        <h1>Built by and for practitioners</h1>
+        <p>Smartworka is built to power the firm of the future.</p>
+      </article>
+      <article>
+        <p>PRODUCTS</p>
+        <h1>Grow your business with the Smartworka Platform for project management</h1>
+        <p>Smartworka increases margins, revenue, and client satisfaction across all advisory and audit engagements.</p>
+      </article>
+      <section></section>
+      </section>
+    </section>
   </main>
 </>
 
