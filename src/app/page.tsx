@@ -34,12 +34,12 @@ const labelImg = [
   {
     id: 8,
     image: "/img-9.png",
-  }
+  },
 ];
 
 export default function Home() {
   return (
-    <section>
+    <>
       <header className="h-full bg-[#051537] flex flex-col gap-10 items-center py-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
         <Button className="h-6 rounded-full text-sm bg-blue-600 hover:bg-blue-700">
           <strong className="mr-2">NEW</strong> Learn how AI can help alleviate
@@ -73,11 +73,46 @@ export default function Home() {
           client experiences.
         </p>
         <figure className="flex items-center gap-12">
-         {labelImg.map((data:any) => (
-           <img src={data.image} alt="logos"/>
-         ))}
+          {labelImg.map((data: any) => (
+            <img src={data.image} alt="logos" key={data.id} />
+          ))}
         </figure>
       </header>
-    </section>
+      <main className="mt-12">
+        <section className="flex items-center gap-12 justify-center px-12">
+          <figure>
+            <img
+              src="/preview -1.png"
+              className="w-[1500px] object-cover"
+              alt="preview"
+            />
+          </figure>
+          <article className="space-y-2">
+            <p className=" text-yellow-400">Business Tools</p>
+            <h1 className="text-xl font-bold">Useful Features</h1>
+            <h3 className="text-xl text-blue-500">Team Management</h3>
+            <p className=" w-3/5">
+              The point of using smartworka is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here', making it look like readable English.
+            </p>
+            <ul className="list-none p-0">
+              <li className="flex items-center mb-2">
+                <img src="/tick-circle.png" alt="Tick" className="mr-2" />
+                <span>99% Survey Report</span>
+              </li>
+              <li className="flex items-center mb-2">
+                <img src="/tick-circle.png" alt="Tick" className="mr-2" />
+                <span>Trusted By Teams</span>
+              </li>
+              <li className="flex items-center mb-2">
+                <img src="/tick-circle.png" alt="Tick" className="mr-2" />
+                <span>Self-Services</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </>
   );
 }
