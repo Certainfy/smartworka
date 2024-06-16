@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 
@@ -38,9 +39,57 @@ const labelImg = [
 ];
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabs = [
+    {
+      id: 0,
+      logo: "/img-1.png",
+      content: (
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div className="mb-8 lg:mb-0">
+            <blockquote className="text-lg italic text-white">
+              “Software for accounting firms is notoriously <br/> outdated, slow, and
+              hard to use. Smartworka is <br/> different – it’s a more streamlined,
+              cloud-first approach.”
+            </blockquote>
+            <p className="mt-4 text-sm font-semibold text-white">
+              Kate Williams
+              <br />
+              Partner, Maxwell Locke & Ritter
+            </p>
+          </div>
+          <div className="flex flex-col items-start text-left text-white">
+            <span className="text-6xl font-bold">5X</span>
+            <p className="mt-2 text-lg">Business Growth</p>
+            <p className="mt-2 w-2/6">
+              Smartworka innovations and efficiencies helped Maxwell Locke &
+              Ritter grow their practice by
+            </p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      id: 1,
+      logo: "/img-2.png",
+      content: <div>Content for Wipfli</div>,
+    },
+    {
+      id: 2,
+      logo: "/img-3.png",
+      content: <div>Content for BerryDunn</div>,
+    },
+    {
+      id: 3,
+      logo: "/img-4.png",
+      content: <div>Content for Warren Averett</div>,
+    },
+  ];
+
   return (
     <>
-      <header className="h-full bg-[#051537] flex flex-col gap-10 items-center py-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
+      <header className="h-full bg-[#051537] flex flex-col gap-10 items-center py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
         <Button className="h-6 rounded-full text-sm bg-blue-600 hover:bg-blue-700">
           <strong className="mr-2">NEW</strong> Learn how AI can help alleviate
           the CPA talent crisis <MoveRight className="ml-2 h-4 w-4" />{" "}
@@ -117,7 +166,7 @@ export default function Home() {
             </ul>
           </article>
         </section>
-        <section className="flex items-center justify-around mt-12">
+        <section className="flex items-center justify-around py-24">
           <article className="text-center">
             <p className=" text-blue-600 text-4xl">200</p>
             <p>Countries Worldwide</p>
@@ -131,7 +180,7 @@ export default function Home() {
             <p>Small & Big Companies</p>
           </article>
         </section>
-        <section className="h-full bg-[#051537] flex flex-col items-center mt-12 py-12 bg-[url('/bg-line.svg')] w-full bg-cover bg-top px-12">
+        <section className="h-full bg-[#051537] flex flex-col items-center mt-12 py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top px-12">
           <article className="text-white text-center space-y-4">
             <h1 className="text-6xl font-medium">
               Built by and for practitioners
@@ -181,10 +230,57 @@ export default function Home() {
                   </div>
                 </article>
               </section>
+              <section className="py-4">
+                <Button className="h-[45px] text-base w-[200px] rounded-full bg-blue-600 hover:bg-blue-800 text-white py-4">
+                  Explore Product <MoveRight className="ml-2 h-4 w-4" />
+                </Button>
+              </section>
             </section>
             <section>
-              <img src="/section-7.png" className="w-full md:w-[500px] object-contain" alt="section" />
+              <img
+                src="/section-7.png"
+                className="w-full md:w-[500px] object-contain"
+                alt="section"
+              />
             </section>
+          </section>
+        </section>
+        <section className="px-12 py-24 space-y-12">
+          <article>
+            <h3 className="text-5xl font-medium text-center">
+              That’s not all, there’s more to it.
+            </h3>
+          </article>
+          <figure>
+            <img src="/frame-2.png" alt="frame" />
+          </figure>
+        </section>
+        <section className="h-full w-full flex flex-col justify-center items-center bg-[#051537] py-12">
+          <article className="text-white space-y-4 text-center">
+            <h1 className="text-6xl font-medium">
+              Trusted by industry leaders
+            </h1>
+            <p className="w-full text-center text-md">
+              Smartworka is the modern, award-winning platform that powers many
+              <br />
+              of the largest advisory and audit firms.
+            </p>
+          </article>
+          <section>
+            <div className="flex justify-center space-x-4 mb-8">
+              {tabs.map((tab, index) => (
+                <button
+                  key={tab.id}
+                  className={`focus:outline-none ${
+                    activeTab === index ? "border-b-2 border-white" : ""
+                  }`}
+                  onClick={() => setActiveTab(index)}
+                >
+                  <img src={tab.logo} alt={`Logo ${index}`} className="w-20" />
+                </button>
+              ))}
+            </div>
+            <div>{tabs[activeTab].content}</div>
           </section>
         </section>
       </main>
