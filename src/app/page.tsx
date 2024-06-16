@@ -46,23 +46,30 @@ export default function Home() {
       id: 0,
       logo: "/img-1.png",
       content: (
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="mb-8 lg:mb-0">
-            <blockquote className="text-lg italic text-white">
-              “Software for accounting firms is notoriously <br/> outdated, slow, and
-              hard to use. Smartworka is <br/> different – it’s a more streamlined,
-              cloud-first approach.”
-            </blockquote>
-            <p className="mt-4 text-sm font-semibold text-white">
-              Kate Williams
-              <br />
-              Partner, Maxwell Locke & Ritter
-            </p>
+        <div className="flex flex-col lg:flex-row w-full justify-center items-center gap-8">
+          <div className="flex flex-col md:flex-row gap-6 items-center">
+            <img
+              src="/reveiw-1.png"
+              className="object-cover"
+              alt="Kate Williams"
+            />
+            <div>
+              <blockquote className="text-[18px] text-white text-center md:text-left">
+                “Software for accounting firms is notoriously <br /> outdated,
+                slow, and hard to use. Smartworka is <br /> different – it’s a
+                more streamlined, cloud-first approach.”
+              </blockquote>
+              <p className="mt-4 text-sm font-semibold text-white text-center md:text-left">
+                Kate Williams
+                <br />
+                Partner, Maxwell Locke & Ritter
+              </p>
+            </div>
           </div>
-          <div className="flex flex-col items-start text-left text-white">
+          <div className="text-white text-center lg:text-left">
             <span className="text-6xl font-bold">5X</span>
             <p className="mt-2 text-lg">Business Growth</p>
-            <p className="mt-2 w-2/6">
+            <p className="mt-2 w-full lg:w-2/6">
               Smartworka innovations and efficiencies helped Maxwell Locke &
               Ritter grow their practice by
             </p>
@@ -73,17 +80,17 @@ export default function Home() {
     {
       id: 1,
       logo: "/img-2.png",
-      content: <div>Content for Wipfli</div>,
+      content: <div className="text-white">Content for Wipfli</div>,
     },
     {
       id: 2,
-      logo: "/img-3.png",
-      content: <div>Content for BerryDunn</div>,
+      logo: "/img-8.png",
+      content: <div className="text-white">Content for BerryDunn</div>,
     },
     {
       id: 3,
       logo: "/img-4.png",
-      content: <div>Content for Warren Averett</div>,
+      content: <div className="text-white">Content for Warren Averett</div>,
     },
   ];
 
@@ -255,7 +262,7 @@ export default function Home() {
             <img src="/frame-2.png" alt="frame" />
           </figure>
         </section>
-        <section className="h-full w-full flex flex-col justify-center items-center bg-[#051537] py-12">
+        <section className="h-full w-full mx-auto bg-[#051537] py-12">
           <article className="text-white space-y-4 text-center">
             <h1 className="text-6xl font-medium">
               Trusted by industry leaders
@@ -266,13 +273,15 @@ export default function Home() {
               of the largest advisory and audit firms.
             </p>
           </article>
-          <section>
-            <div className="flex justify-center space-x-4 mb-8">
+          <section className="py-6 w-full">
+            <div className="flex justify-center space-x-20 mb-8">
               {tabs.map((tab, index) => (
                 <button
                   key={tab.id}
                   className={`focus:outline-none ${
-                    activeTab === index ? "border-b-2 border-white" : ""
+                    activeTab === index
+                      ? "border-2 rounded-full px-4 py-3 border-white"
+                      : ""
                   }`}
                   onClick={() => setActiveTab(index)}
                 >
