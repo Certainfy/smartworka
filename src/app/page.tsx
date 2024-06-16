@@ -22,17 +22,19 @@ export default function Home() {
   
   return (
     <>
-      <header className="h-full bg-[#051537] flex flex-col gap-10 items-center py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
-        <Button className="h-6 rounded-full text-white text-sm bg-blue-600 hover:bg-blue-700">
-          <strong className="mr-2">NEW</strong> Learn how AI can help alleviate
+      <header className="h-full relative z-10 bg-[#051537] flex flex-col gap-10 items-center py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
+       <div className="px-4 lg:px-0">
+       <Button className="h-full flex-col lg:flex-row text-wrap rounded-full text-white text-sm bg-blue-600 hover:bg-blue-700">
+          <strong className="mr-0 lg:mr-2">NEW</strong> Learn how AI can help alleviate
           the CPA talent crisis <MoveRight className="ml-2 h-4 w-4" />{" "}
         </Button>
-        <h1 className="text-4xl md:text-6xl lg:text-8xl text-white text-center font-bold">
+       </div>
+        <h1 className="text-2xl md:text-6xl lg:text-8xl text-white text-center font-bold">
           The enterprise work
           <br className="hidden md:block" />
           management platform
         </h1>
-        <p className="text-sm md:text-md text-white text-center px-4 md:px-0">
+        <p className="text-sm md:text-lg text-white text-center px-4 md:px-0">
           The foundation for managing projects, programs, and processes that
           scale.
         </p>
@@ -44,7 +46,7 @@ export default function Home() {
             Watch Demo <MoveRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
-        <p className="text-sm md:text-md text-white text-center">
+        <p className="text-sm md:text-lg text-white text-center">
           No credit card needed ✦ Unlimited time on Free plan
         </p>
         <figure className="py-8">
@@ -60,7 +62,7 @@ export default function Home() {
               src={data.image}
               alt="logos"
               key={data.id}
-              className="w-24 md:w-auto"
+              className="w-14 md:w-auto"
             />
           ))}
         </figure>
@@ -99,7 +101,7 @@ export default function Home() {
             </ul>
           </article>
         </section>
-        <section className="flex items-center justify-around py-24">
+        <section className="flex flex-col lg:flex-row gap-8 items-center justify-around py-24">
           <article className="text-center">
             <p className=" text-blue-600 text-4xl">200</p>
             <p>Countries Worldwide</p>
@@ -115,16 +117,16 @@ export default function Home() {
         </section>
         <section className="h-full bg-[#051537] flex flex-col items-center mt-12 py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top px-12">
           <article className="text-white text-center space-y-4">
-            <h1 className="text-6xl font-medium">
+            <h1 className="text-3xl lg:text-6xl font-medium">
               Built by and for practitioners
             </h1>
-            <p>Smartworka is built to power the firm of the future.</p>
+            <p className="text-sm lg:text-md">Smartworka is built to power the firm of the future.</p>
           </article>
-          <section className="flex flex-row gap-10 items-center pt-12">
+          <section className="flex flex-col lg:flex-row gap-10 items-center pt-12">
             <section>
               <article className="text-white space-y-2">
-                <p>PRODUCTS</p>
-                <h1 className="w-full text-4xl font-medium md:w-[525px] mx-auto md:mx-0">
+                <p className="text-md lg:text-base">PRODUCTS</p>
+                <h1 className="w-full text-3xl lg:text-4xl font-medium md:w-[525px] mx-auto md:mx-0">
                   Grow your business with the Smartworka Platform for project
                   management
                 </h1>
@@ -180,7 +182,7 @@ export default function Home() {
         </section>
         <section className="px-12 py-24 space-y-12">
           <article>
-            <h3 className="text-5xl font-medium text-center">
+            <h3 className="text-3xl lg:text-5xl font-medium text-center">
               That’s not all, there’s more to it.
             </h3>
           </article>
@@ -190,17 +192,17 @@ export default function Home() {
         </section>
         <section className="h-full w-full flex-col md:flex-row items-center justify-center bg-[#051537] py-12">
           <article className="text-white space-y-4 text-center">
-            <h1 className="text-6xl font-medium">
+            <h1 className="text-3xl lg:text-6xl font-medium">
               Trusted by industry leaders
             </h1>
-            <p className="w-full text-center text-md">
+            <p className="w-full text-center text-sm lg:text-md px-6 md:px-0">
               Smartworka is the modern, award-winning platform that powers many
               <br />
               of the largest advisory and audit firms.
             </p>
           </article>
           <section className="py-12 w-full">
-            <div className="flex justify-center space-x-20 mb-8">
+            <div className="flex flex-col lg:flex-row gap-4 items-center justify-center space-y-4 lg:space-x-20 mb-8">
               {tabs.map((tab, index) => (
                 <button
                   key={tab.id}
@@ -218,14 +220,14 @@ export default function Home() {
             <div className="pt-12">{tabs[activeTab].content}</div>
           </section>
         </section>
-        <section className="min-h-full w-full py-12 relative">
-          <article className="px-12 py-12 relative z-50">
+        <section className="h-full lg:min-h-full w-full py-12 relative">
+          <article className="px-12 py-6 lg:py-12 relative z-50">
           <Card className="w-full h-full py-16">
             <CardContent className="flex gap-4 flex-col items-center justify-center">
-              <div className=" space-y-3">
-              <h2 className=" text-6xl">Let us worry about your product</h2>
-              <p className="text-lg mb-8">
-          With <span className="text-blue-600 font-semibold">Smartworka</span> you can get your product or project set up and manage according to your budget and plans.
+              <div className="space-y-3">
+              <h2 className="text-3xl text-center md:text-6xl">Let us worry about your product</h2>
+              <p className="text-md lg:text-lg mb-8 text-center">
+          With <span className="text-blue-600 font-semibold">Smartworka</span> you can get your product or project set up and manage according <br/> to your budget and plans.
         </p>
             </div>
             
@@ -241,49 +243,47 @@ export default function Home() {
             </CardContent>
           </Card>
           </article>
-          <img src="/glow.svg" alt="Smartworka" className="z-40 absolute top-32 mx-auto w-full" />
+          <img src="/glow.svg" alt="Smartworka" className="z-40 hidden lg:block absolute top-32 mx-auto w-full" />
         </section>
-   
-      </main>
-      
+      </main>  
       <footer className="bg-white py-8 mt-16">
-        <div className="w-full px-12">
-          <div className="flex justify-between items-center">
-          <img src="/Smartworka.svg" alt="logo" />
-            <nav className="flex gap-8">
-              <Link href="#about" className="text-gray-600 hover:text-blue-600">About</Link>
-              <Link href="#features" className="text-gray-600 hover:text-blue-600">Features</Link>
-              <Link href="#works" className="text-gray-600 hover:text-blue-600">Works</Link>
-              <Link href="#support" className="text-gray-600 hover:text-blue-600">Support</Link>
-            </nav>
-            <div className="mt-6 flex text-[#0067FF] justify-center space-x-4">
-            <Link href="#">
-              <FaFacebookF />
-            </Link>
-            <Link href="#">
-              <FaTwitter />
-            </Link>
+  <div className="w-full px-4 md:px-12">
+    <div className="flex flex-col md:flex-row justify-between items-center">
+      <img src="/Smartworka.svg" alt="logo" className="mb-4 md:mb-0" />
+      <nav className="flex flex-col md:flex-row gap-4 md:gap-8 text-center mb-4 md:mb-0">
+        <Link href="#about" className="text-gray-600 hover:text-blue-600">About</Link>
+        <Link href="#features" className="text-gray-600 hover:text-blue-600">Features</Link>
+        <Link href="#works" className="text-gray-600 hover:text-blue-600">Works</Link>
+        <Link href="#support" className="text-gray-600 hover:text-blue-600">Support</Link>
+      </nav>
+      <div className="flex justify-center space-x-4 text-[#0067FF]">
+        <Link href="#">
+          <FaFacebookF />
+        </Link>
+        <Link href="#">
+          <FaTwitter />
+        </Link>
+        <Link href="#">
+          <FaInstagram />
+        </Link>
+        <Link href="#">
+          <FaLinkedin />
+        </Link>
+        <Link href="#">
+          <FaGithub />
+        </Link>
+      </div>
+    </div>
+    <div className="flex flex-col md:flex-row justify-between items-center lg:mt-8 mt-4">
+      <p className="text-gray-600 text-center md:text-left">&copy; Copyright 2024, All Rights Reserved</p>
+      <div className="flex flex-col items-center md:flex-row gap-4 mt-4 md:mt-0">
+        <Link href="#privacy" className="text-gray-600 hover:text-blue-600">Privacy Policy</Link>
+        <Link href="#terms" className="text-gray-600 hover:text-blue-600">Terms & Conditions</Link>
+      </div>
+    </div>
+  </div>
+</footer>
 
-            <Link href="#">
-              <FaInstagram />
-            </Link>
-            <Link href="#">
-              <FaLinkedin />
-            </Link>
-            <Link href="#">
-              <FaGithub />
-            </Link>
-          </div>
-          </div>
-          <div className="flex justify-between items-center mt-8">
-            <p className="text-gray-600">&copy; Copyright 2024, All Rights Reserved</p>
-            <div className="flex gap-4">
-              <Link href="#privacy" className="text-gray-600 hover:text-blue-600">Privacy Policy</Link>
-              <Link href="#terms" className="text-gray-600 hover:text-blue-600">Terms & Conditions</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }
