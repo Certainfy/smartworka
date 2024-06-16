@@ -35,7 +35,7 @@ export default function NavBar() {
             </Link>
           </ul>
         </div>
-        <div className="space-x-3 hidden lg:block">
+        <div className="space-x-3">
           <Button className="border-0" variant="outline">
             Login
           </Button>
@@ -74,14 +74,14 @@ export default function NavBar() {
             </Link>
           </ul>
         
-        <div className="space-x-3 hidden lg:block">
-          <Button className="border-0" variant="outline">
+        {/* <div className="space-x-3 flex flex-col w-full lg:hidden">
+          <Button className=" text-white" variant="outline">
             Login
           </Button>
           <Button className="text-white rounded-full bg-blue-600 hover:bg-blue-800">
             Get Started <MoveRight className="ml-2 h-4 w-4" />
           </Button>
-        </div>
+        </div> */}
         
       </nav>
     </div>
