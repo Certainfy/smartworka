@@ -1,210 +1,29 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 import { MoveRight } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Link from "next/link";
+import { tabs } from "@/constant/tabsData";
+import { labelImg } from "@/constant/imageData";
 
-const labelImg = [
-  {
-    id: 1,
-    image: "/img-1.png",
-  },
-  {
-    id: 2,
-    image: "/img-2.png",
-  },
-  {
-    id: 3,
-    image: "/img-3.png",
-  },
-  {
-    id: 4,
-    image: "/img-4.png",
-  },
-  {
-    id: 5,
-    image: "/img-5.png",
-  },
-  {
-    id: 6,
-    image: "/img-7.png",
-  },
-  {
-    id: 7,
-    image: "/img-8.png",
-  },
-  {
-    id: 8,
-    image: "/img-9.png",
-  },
-];
+
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
 
-  const tabs = [
-    {
-      id: 0,
-      logo: "/img-1.png",
-      content: (
-        <div className="flex justify-center items-center gap-24">
-          <div className="flex gap-4">
-            <div>
-              <img
-                src="/reveiw-1.png"
-                className="object-cover"
-                alt="Kate Williams"
-              />
-            </div>
-            <div>
-              <p className="text-[18px] text-white text-center md:text-left">
-                “Software for accounting firms is notoriously <br /> outdated,
-                slow, and hard to use. Smartworka is <br /> different – it’s a
-                more streamlined, cloud-first approach.”
-              </p>
-              <p className="mt-4 text-sm font-semibold text-white text-center md:text-left">
-                Kate Williams
-                <br />
-                Partner, Maxwell Locke & Ritter
-              </p>
-            </div>
-          </div>
-          <div className="text-white">
-            <p className="text-6xl font-bold">5X</p>
-            <p className="text-lg">Business Growth</p>
-            <p className="w-full">
-              Smartworka innovations and
-              <br /> efficiencies helped Maxwell
-              <br /> Locke & Ritter grow their
-              <br /> practice by
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      id: 1,
-      logo: "/img-2.png",
-      content: (
-        <div className="flex justify-center items-center gap-24">
-          <div className="flex gap-4">
-            <div>
-              <img
-                src="/reveiw-1.png"
-                className="object-cover"
-                alt="Kate Williams"
-              />
-            </div>
-            <div>
-              <p className="text-[18px] text-white text-center md:text-left">
-                “Software for accounting firms is notoriously <br /> outdated,
-                slow, and hard to use. Smartworka is <br /> different – it’s a
-                more streamlined, cloud-first approach.”
-              </p>
-              <p className="mt-4 text-sm font-semibold text-white text-center md:text-left">
-                Kate Williams
-                <br />
-                Partner, Maxwell Locke & Ritter
-              </p>
-            </div>
-          </div>
-          <div className="text-white">
-            <p className="text-6xl font-bold">5X</p>
-            <p className="text-lg">Business Growth</p>
-            <p className="w-full">
-              Smartworka innovations and
-              <br /> efficiencies helped Maxwell
-              <br /> Locke & Ritter grow their
-              <br /> practice by
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      id: 2,
-      logo: "/img-8.png",
-      content: (
-        <div className="flex justify-center items-center gap-24">
-          <div className="flex gap-4">
-            <div>
-              <img
-                src="/reveiw-1.png"
-                className="object-cover"
-                alt="Kate Williams"
-              />
-            </div>
-            <div>
-              <p className="text-[18px] text-white text-center md:text-left">
-                “Software for accounting firms is notoriously <br /> outdated,
-                slow, and hard to use. Smartworka is <br /> different – it’s a
-                more streamlined, cloud-first approach.”
-              </p>
-              <p className="mt-4 text-sm font-semibold text-white text-center md:text-left">
-                Kate Williams
-                <br />
-                Partner, Maxwell Locke & Ritter
-              </p>
-            </div>
-          </div>
-          <div className="text-white">
-            <p className="text-6xl font-bold">5X</p>
-            <p className="text-lg">Business Growth</p>
-            <p className="w-full">
-              Smartworka innovations and
-              <br /> efficiencies helped Maxwell
-              <br /> Locke & Ritter grow their
-              <br /> practice by
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      id: 3,
-      logo: "/img-4.png",
-      content: (
-        <div className="flex justify-center items-center gap-24">
-          <div className="flex gap-4">
-            <div>
-              <img
-                src="/reveiw-1.png"
-                className="object-cover"
-                alt="Kate Williams"
-              />
-            </div>
-            <div>
-              <p className="text-[18px] text-white text-center md:text-left">
-                “Software for accounting firms is notoriously <br /> outdated,
-                slow, and hard to use. Smartworka is <br /> different – it’s a
-                more streamlined, cloud-first approach.”
-              </p>
-              <p className="mt-4 text-sm font-semibold text-white text-center md:text-left">
-                Kate Williams
-                <br />
-                Partner, Maxwell Locke & Ritter
-              </p>
-            </div>
-          </div>
-          <div className="text-white">
-            <p className="text-6xl font-bold">5X</p>
-            <p className="text-lg">Business Growth</p>
-            <p className="w-full">
-              Smartworka innovations and
-              <br /> efficiencies helped Maxwell
-              <br /> Locke & Ritter grow their
-              <br /> practice by
-            </p>
-          </div>
-        </div>
-      ),
-    },
-  ];
-
+  
   return (
     <>
       <header className="h-full bg-[#051537] flex flex-col gap-10 items-center py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
-        <Button className="h-6 rounded-full text-sm bg-blue-600 hover:bg-blue-700">
+        <Button className="h-6 rounded-full text-white text-sm bg-blue-600 hover:bg-blue-700">
           <strong className="mr-2">NEW</strong> Learn how AI can help alleviate
           the CPA talent crisis <MoveRight className="ml-2 h-4 w-4" />{" "}
         </Button>
@@ -399,30 +218,72 @@ export default function Home() {
             <div className="pt-12">{tabs[activeTab].content}</div>
           </section>
         </section>
-        <section className="h-full w-full py-12 px-12">
-          <Card className="">
-            <CardContent className="py-8 space-y-6 flex flex-col items-center justify-center">
+        <section className="min-h-full w-full py-12 relative">
+          <article className="px-12 py-12 relative z-50">
+          <Card className="w-full h-full py-16">
+            <CardContent className="flex gap-4 flex-col items-center justify-center">
               <div className=" space-y-3">
               <h2 className=" text-6xl">Let us worry about your product</h2>
-              <p className="text-center">
-                With Smartworka you get your product or project set up and
-                manage according to <br /> your budget and plans
-              </p>
+              <p className="text-lg mb-8">
+          With <span className="text-blue-600 font-semibold">Smartworka</span> you can get your product or project set up and manage according to your budget and plans.
+        </p>
             </div>
-            <div>
-              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                <Button className="h-[45px] text-base w-[200px] rounded-full bg-blue-600 hover:bg-blue-800 text-white py-4">
+            
+              <div className="flex flex-col md:flex-row gap-4">
+                <Button className="h-[45px] text-base w-[200px] rounded-full bg-blue-600 hover:bg-blue-800 text-white py-4 transition duration-300">
                   Get Started for free
                 </Button>
-                <Button className="h-[45px] text-base w-[170px] rounded-full bg-white border-2 border-blue-500 text-blue-600 hover:bg-white py-4">
+                <Button className="h-[45px] text-base w-[170px] rounded-full bg-white border-2 border-blue-500 text-blue-600 hover:bg-white py-4 transition duration-300">
                   Book a Demo
                 </Button>
               </div>
-            </div>
+          
             </CardContent>
           </Card>
+          </article>
+          <img src="/glow.svg" alt="Smartworka" className="z-40 absolute top-32 mx-auto w-full" />
         </section>
+   
       </main>
+      
+      <footer className="bg-white py-8 mt-16">
+        <div className="w-full px-12">
+          <div className="flex justify-between items-center">
+          <img src="/Smartworka.svg" alt="logo" />
+            <nav className="flex gap-8">
+              <Link href="#about" className="text-gray-600 hover:text-blue-600">About</Link>
+              <Link href="#features" className="text-gray-600 hover:text-blue-600">Features</Link>
+              <Link href="#works" className="text-gray-600 hover:text-blue-600">Works</Link>
+              <Link href="#support" className="text-gray-600 hover:text-blue-600">Support</Link>
+            </nav>
+            <div className="mt-6 flex text-[#0067FF] justify-center space-x-4">
+            <Link href="#">
+              <FaFacebookF />
+            </Link>
+            <Link href="#">
+              <FaTwitter />
+            </Link>
+
+            <Link href="#">
+              <FaInstagram />
+            </Link>
+            <Link href="#">
+              <FaLinkedin />
+            </Link>
+            <Link href="#">
+              <FaGithub />
+            </Link>
+          </div>
+          </div>
+          <div className="flex justify-between items-center mt-8">
+            <p className="text-gray-600">&copy; Copyright 2024, All Rights Reserved</p>
+            <div className="flex gap-4">
+              <Link href="#privacy" className="text-gray-600 hover:text-blue-600">Privacy Policy</Link>
+              <Link href="#terms" className="text-gray-600 hover:text-blue-600">Terms & Conditions</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
