@@ -387,7 +387,7 @@ export default function Home() {
                 </button>
               ))}
             </div>
-            <div>{tabs[activeTab].content}</div>
+            <div className="pt-12">{tabs[activeTab].content}</div>
           </section>
         </section>
       </main>
