@@ -46,19 +46,21 @@ export default function Home() {
       id: 0,
       logo: "/img-1.png",
       content: (
-        <div className="flex flex-col lg:flex-row w-full justify-center items-center gap-8">
-          <div className="flex flex-col md:flex-row gap-6 items-center">
+        <div className="flex justify-center items-center gap-24">
+          <div className="flex gap-4">
+            <div>
             <img
               src="/reveiw-1.png"
               className="object-cover"
               alt="Kate Williams"
             />
+            </div>
             <div>
-              <blockquote className="text-[18px] text-white text-center md:text-left">
+              <p className="text-[18px] text-white text-center md:text-left">
                 “Software for accounting firms is notoriously <br /> outdated,
                 slow, and hard to use. Smartworka is <br /> different – it’s a
                 more streamlined, cloud-first approach.”
-              </blockquote>
+              </p>
               <p className="mt-4 text-sm font-semibold text-white text-center md:text-left">
                 Kate Williams
                 <br />
@@ -66,12 +68,12 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="text-white text-center lg:text-left">
-            <span className="text-6xl font-bold">5X</span>
-            <p className="mt-2 text-lg">Business Growth</p>
-            <p className="mt-2 w-full lg:w-2/6">
-              Smartworka innovations and efficiencies helped Maxwell Locke &
-              Ritter grow their practice by
+          <div className="text-white">
+            <p className="text-6xl font-bold">5X</p>
+            <p className="text-lg">Business Growth</p>
+            <p className="w-full">
+              Smartworka innovations and<br /> efficiencies helped Maxwell<br /> Locke &
+              Ritter grow their<br /> practice by
             </p>
           </div>
         </div>
@@ -80,17 +82,113 @@ export default function Home() {
     {
       id: 1,
       logo: "/img-2.png",
-      content: <div className="text-white">Content for Wipfli</div>,
+      content: (
+        <div className="flex justify-center items-center gap-24">
+          <div className="flex gap-4">
+            <div>
+            <img
+              src="/reveiw-1.png"
+              className="object-cover"
+              alt="Kate Williams"
+            />
+            </div>
+            <div>
+              <p className="text-[18px] text-white text-center md:text-left">
+                “Software for accounting firms is notoriously <br /> outdated,
+                slow, and hard to use. Smartworka is <br /> different – it’s a
+                more streamlined, cloud-first approach.”
+              </p>
+              <p className="mt-4 text-sm font-semibold text-white text-center md:text-left">
+                Kate Williams
+                <br />
+                Partner, Maxwell Locke & Ritter
+              </p>
+            </div>
+          </div>
+          <div className="text-white">
+            <p className="text-6xl font-bold">5X</p>
+            <p className="text-lg">Business Growth</p>
+            <p className="w-full">
+              Smartworka innovations and<br /> efficiencies helped Maxwell<br /> Locke &
+              Ritter grow their<br /> practice by
+            </p>
+          </div>
+        </div>
+      ),
     },
     {
       id: 2,
       logo: "/img-8.png",
-      content: <div className="text-white">Content for BerryDunn</div>,
+      content: (
+        <div className="flex justify-center items-center gap-24">
+          <div className="flex gap-4">
+            <div>
+            <img
+              src="/reveiw-1.png"
+              className="object-cover"
+              alt="Kate Williams"
+            />
+            </div>
+            <div>
+              <p className="text-[18px] text-white text-center md:text-left">
+                “Software for accounting firms is notoriously <br /> outdated,
+                slow, and hard to use. Smartworka is <br /> different – it’s a
+                more streamlined, cloud-first approach.”
+              </p>
+              <p className="mt-4 text-sm font-semibold text-white text-center md:text-left">
+                Kate Williams
+                <br />
+                Partner, Maxwell Locke & Ritter
+              </p>
+            </div>
+          </div>
+          <div className="text-white">
+            <p className="text-6xl font-bold">5X</p>
+            <p className="text-lg">Business Growth</p>
+            <p className="w-full">
+              Smartworka innovations and<br /> efficiencies helped Maxwell<br /> Locke &
+              Ritter grow their<br /> practice by
+            </p>
+          </div>
+        </div>
+      ),
     },
     {
       id: 3,
       logo: "/img-4.png",
-      content: <div className="text-white">Content for Warren Averett</div>,
+      content: (
+        <div className="flex justify-center items-center gap-24">
+          <div className="flex gap-4">
+            <div>
+            <img
+              src="/reveiw-1.png"
+              className="object-cover"
+              alt="Kate Williams"
+            />
+            </div>
+            <div>
+              <p className="text-[18px] text-white text-center md:text-left">
+                “Software for accounting firms is notoriously <br /> outdated,
+                slow, and hard to use. Smartworka is <br /> different – it’s a
+                more streamlined, cloud-first approach.”
+              </p>
+              <p className="mt-4 text-sm font-semibold text-white text-center md:text-left">
+                Kate Williams
+                <br />
+                Partner, Maxwell Locke & Ritter
+              </p>
+            </div>
+          </div>
+          <div className="text-white">
+            <p className="text-6xl font-bold">5X</p>
+            <p className="text-lg">Business Growth</p>
+            <p className="w-full">
+              Smartworka innovations and<br /> efficiencies helped Maxwell<br /> Locke &
+              Ritter grow their<br /> practice by
+            </p>
+          </div>
+        </div>
+      ),
     },
   ];
 
@@ -262,7 +360,7 @@ export default function Home() {
             <img src="/frame-2.png" alt="frame" />
           </figure>
         </section>
-        <section className="h-full w-full mx-auto bg-[#051537] py-12">
+        <section className="h-full w-full flex-col md:flex-row items-center justify-center bg-[#051537] py-12">
           <article className="text-white space-y-4 text-center">
             <h1 className="text-6xl font-medium">
               Trusted by industry leaders
@@ -273,7 +371,7 @@ export default function Home() {
               of the largest advisory and audit firms.
             </p>
           </article>
-          <section className="py-6 w-full">
+          <section className="py-12 w-full">
             <div className="flex justify-center space-x-20 mb-8">
               {tabs.map((tab, index) => (
                 <button
