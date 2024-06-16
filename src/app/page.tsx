@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const labelImg = [
   {
@@ -49,11 +50,11 @@ export default function Home() {
         <div className="flex justify-center items-center gap-24">
           <div className="flex gap-4">
             <div>
-            <img
-              src="/reveiw-1.png"
-              className="object-cover"
-              alt="Kate Williams"
-            />
+              <img
+                src="/reveiw-1.png"
+                className="object-cover"
+                alt="Kate Williams"
+              />
             </div>
             <div>
               <p className="text-[18px] text-white text-center md:text-left">
@@ -72,8 +73,10 @@ export default function Home() {
             <p className="text-6xl font-bold">5X</p>
             <p className="text-lg">Business Growth</p>
             <p className="w-full">
-              Smartworka innovations and<br /> efficiencies helped Maxwell<br /> Locke &
-              Ritter grow their<br /> practice by
+              Smartworka innovations and
+              <br /> efficiencies helped Maxwell
+              <br /> Locke & Ritter grow their
+              <br /> practice by
             </p>
           </div>
         </div>
@@ -86,11 +89,11 @@ export default function Home() {
         <div className="flex justify-center items-center gap-24">
           <div className="flex gap-4">
             <div>
-            <img
-              src="/reveiw-1.png"
-              className="object-cover"
-              alt="Kate Williams"
-            />
+              <img
+                src="/reveiw-1.png"
+                className="object-cover"
+                alt="Kate Williams"
+              />
             </div>
             <div>
               <p className="text-[18px] text-white text-center md:text-left">
@@ -109,8 +112,10 @@ export default function Home() {
             <p className="text-6xl font-bold">5X</p>
             <p className="text-lg">Business Growth</p>
             <p className="w-full">
-              Smartworka innovations and<br /> efficiencies helped Maxwell<br /> Locke &
-              Ritter grow their<br /> practice by
+              Smartworka innovations and
+              <br /> efficiencies helped Maxwell
+              <br /> Locke & Ritter grow their
+              <br /> practice by
             </p>
           </div>
         </div>
@@ -123,11 +128,11 @@ export default function Home() {
         <div className="flex justify-center items-center gap-24">
           <div className="flex gap-4">
             <div>
-            <img
-              src="/reveiw-1.png"
-              className="object-cover"
-              alt="Kate Williams"
-            />
+              <img
+                src="/reveiw-1.png"
+                className="object-cover"
+                alt="Kate Williams"
+              />
             </div>
             <div>
               <p className="text-[18px] text-white text-center md:text-left">
@@ -146,8 +151,10 @@ export default function Home() {
             <p className="text-6xl font-bold">5X</p>
             <p className="text-lg">Business Growth</p>
             <p className="w-full">
-              Smartworka innovations and<br /> efficiencies helped Maxwell<br /> Locke &
-              Ritter grow their<br /> practice by
+              Smartworka innovations and
+              <br /> efficiencies helped Maxwell
+              <br /> Locke & Ritter grow their
+              <br /> practice by
             </p>
           </div>
         </div>
@@ -160,11 +167,11 @@ export default function Home() {
         <div className="flex justify-center items-center gap-24">
           <div className="flex gap-4">
             <div>
-            <img
-              src="/reveiw-1.png"
-              className="object-cover"
-              alt="Kate Williams"
-            />
+              <img
+                src="/reveiw-1.png"
+                className="object-cover"
+                alt="Kate Williams"
+              />
             </div>
             <div>
               <p className="text-[18px] text-white text-center md:text-left">
@@ -183,8 +190,10 @@ export default function Home() {
             <p className="text-6xl font-bold">5X</p>
             <p className="text-lg">Business Growth</p>
             <p className="w-full">
-              Smartworka innovations and<br /> efficiencies helped Maxwell<br /> Locke &
-              Ritter grow their<br /> practice by
+              Smartworka innovations and
+              <br /> efficiencies helped Maxwell
+              <br /> Locke & Ritter grow their
+              <br /> practice by
             </p>
           </div>
         </div>
@@ -389,6 +398,29 @@ export default function Home() {
             </div>
             <div className="pt-12">{tabs[activeTab].content}</div>
           </section>
+        </section>
+        <section className="h-full w-full py-12 px-12">
+          <Card className="">
+            <CardContent className="py-8 space-y-6 flex flex-col items-center justify-center">
+              <div className=" space-y-3">
+              <h2 className=" text-6xl">Let us worry about your product</h2>
+              <p className="text-center">
+                With Smartworka you get your product or project set up and
+                manage according to <br /> your budget and plans
+              </p>
+            </div>
+            <div>
+              <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                <Button className="h-[45px] text-base w-[200px] rounded-full bg-blue-600 hover:bg-blue-800 text-white py-4">
+                  Get Started for free
+                </Button>
+                <Button className="h-[45px] text-base w-[170px] rounded-full bg-white border-2 border-blue-500 text-blue-600 hover:bg-white py-4">
+                  Book a Demo
+                </Button>
+              </div>
+            </div>
+            </CardContent>
+          </Card>
         </section>
       </main>
     </>
