@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
   FaFacebookF,
@@ -13,15 +13,17 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Link from "next/link";
 import { tabs } from "@/constant/tabsData";
 import { labelImg } from "@/constant/imageData";
+import { motion, useScroll, useTransform } from "framer-motion"
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <>
-      <header className="h-full relative z-10 bg-[#051537] flex flex-col gap-10 items-center py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
+    <div  
+    >
+      <motion.header   className="h-full relative z-10 bg-[#051537] flex flex-col gap-10 items-center py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
         <div className="px-4 lg:px-0">
-          <Button className="h-full flex-col lg:flex-row text-wrap rounded-full text-white text-sm bg-blue-600 hover:bg-blue-700">
+          <Button className="h-full flex-col max-w-full lg:flex-row text-wrap rounded-full text-white text-sm bg-blue-600 hover:bg-blue-700">
             <strong className="mr-0 lg:mr-2">NEW</strong> Learn how AI can help
             alleviate the CPA talent crisis{" "}
             <MoveRight className="ml-2 h-4 w-4" />{" "}
@@ -64,7 +66,7 @@ export default function Home() {
             />
           ))}
         </figure>
-      </header>
+      </motion.header>
       <main className="mt-12">
         <section className="flex flex-col md:flex-row items-center gap-12 justify-center px-4 md:px-12">
           <figure className="w-full md:w-auto">
@@ -316,6 +318,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
