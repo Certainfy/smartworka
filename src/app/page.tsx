@@ -14,16 +14,25 @@ import Link from "next/link";
 import { tabs } from "@/constant/tabsData";
 import { labelImg } from "@/constant/imageData";
 import { motion, useScroll, useTransform } from "framer-motion"
+import Linelayout from "@/components/ui/line-layout";
+import NavBar from "@/components/navBar";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
+  const router = useRouter();
 
+  function handleSignUp() {
+    router.push("/signup");
+  }
   return (
-    <div  
+    < 
     >
-      <motion.header id="about"  className="h-full relative z-10 bg-[#051537] flex flex-col gap-10 items-center py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
+      <NavBar/>
+      <Linelayout>
+      <header id="about"  className="relative z-10 flex flex-col gap-10 items-center py-24">
         <div className="px-4 lg:px-0">
-          <Button className="h-full flex-col max-w-full lg:flex-row text-wrap rounded-full text-white text-sm bg-blue-600 hover:bg-blue-700">
+          <Button className="h-full flex-col max-w-full lg:flex-row text-wrap rounded-full text-white text-sm bg-blue-600 hover:bg-blue-700" >
             <strong className="mr-0 lg:mr-2">NEW</strong> Learn how AI can help
             alleviate the CPA talent crisis{" "}
             <MoveRight className="ml-2 h-4 w-4" />{" "}
@@ -39,7 +48,7 @@ export default function Home() {
           scale.
         </p>
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="h-[45px] text-base w-[170px] rounded-full bg-blue-600 hover:bg-blue-800 text-white py-4">
+          <Button className="h-[45px] text-base w-[170px] rounded-full bg-blue-600 hover:bg-blue-800 text-white py-4" onClick={handleSignUp}>
             Get Started <MoveRight className="ml-2 h-4 w-4" />
           </Button>
           <Button className="h-[45px] text-base w-[170px] rounded-full bg-white text-blue-600 hover:bg-white py-4">
@@ -66,7 +75,8 @@ export default function Home() {
             />
           ))}
         </figure>
-      </motion.header>
+      </header>
+      </Linelayout>
       <main className="mt-12">
         <section id="features" className="flex flex-col md:flex-row items-center gap-12 justify-center px-4 md:px-12">
           <figure className="w-full md:w-auto">
@@ -241,7 +251,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-4">
-                  <Button className="h-[45px] text-base w-[200px] rounded-full bg-blue-600 hover:bg-blue-800 text-white py-4 transition duration-300">
+                  <Button className="h-[45px] text-base w-[200px] rounded-full bg-blue-600 hover:bg-blue-800 text-white py-4 transition duration-300" onClick={handleSignUp}>
                     Get Started for free
                   </Button>
                   <Button className="h-[45px] text-base w-[170px] rounded-full bg-white border-2 border-blue-500 text-blue-600 hover:bg-white py-4 transition duration-300">
@@ -318,6 +328,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
