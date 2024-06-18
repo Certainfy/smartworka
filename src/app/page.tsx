@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div  
     >
-      <motion.header   className="h-full relative z-10 bg-[#051537] flex flex-col gap-10 items-center py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
+      <motion.header id="about"  className="h-full relative z-10 bg-[#051537] flex flex-col gap-10 items-center py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top">
         <div className="px-4 lg:px-0">
           <Button className="h-full flex-col max-w-full lg:flex-row text-wrap rounded-full text-white text-sm bg-blue-600 hover:bg-blue-700">
             <strong className="mr-0 lg:mr-2">NEW</strong> Learn how AI can help
@@ -68,7 +68,7 @@ export default function Home() {
         </figure>
       </motion.header>
       <main className="mt-12">
-        <section className="flex flex-col md:flex-row items-center gap-12 justify-center px-4 md:px-12">
+        <section id="features" className="flex flex-col md:flex-row items-center gap-12 justify-center px-4 md:px-12">
           <figure className="w-full md:w-auto">
             <img
               src="/preview -1.png"
@@ -115,10 +115,10 @@ export default function Home() {
             <p>Small & Big Companies</p>
           </article>
         </section>
-        <section className="h-full bg-[#051537] flex flex-col items-center mt-12 py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top px-12">
+        <section id="works" className="h-full bg-[#051537] flex flex-col items-center mt-12 py-24 bg-[url('/bg-line.svg')] w-full bg-cover bg-top px-12">
           <article className="text-white text-center space-y-4">
             <h1 className="text-3xl lg:text-6xl font-medium">
-              Built by and for practitioners
+              How It Works
             </h1>
             <p className="text-sm lg:text-md">
               Smartworka is built to power the firm of the future.
@@ -222,7 +222,7 @@ export default function Home() {
             <div className="pt-12">{tabs[activeTab].content}</div>
           </section>
         </section>
-        <section className="h-full lg:min-h-full w-full py-12 relative">
+        <section id="contact" className="h-full lg:min-h-full w-full py-12 relative">
           <article className="px-12 py-6 lg:py-12 relative z-50">
             <Card className="w-full h-full py-16 rounded-md">
               <CardContent className="flex gap-4 flex-col items-center justify-center">
