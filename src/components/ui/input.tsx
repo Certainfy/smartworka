@@ -19,7 +19,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ) => {
     const handleChange = (e: any) => {
       if (onChange) {
-        onChange(e.target.value);
+        // Pass the entire event object instead of just the value
+        onChange(e);
+        // onChange(e.target.value);
       }
       return null;
     };
