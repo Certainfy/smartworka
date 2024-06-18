@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import Linelayout from "@/components/ui/line-layout";
 import { Eye, EyeOff, Mail } from "lucide-react";
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import Link from 'next/link';
 
 interface FormErrors {
   companyName?: string;
@@ -23,6 +24,16 @@ export default function SignUp() {
     const [password, setPassword] = useState<string>("");
     const [confirmPassword, setConfirmPassword] = useState<string>("");
     const [termsAccepted, setTermsAccepted] = useState<boolean>(false);
+
+    // Function to reset form fields
+    const resetForm = () => {
+      setCompanyName('');
+      setEmail('');
+      setPassword('');
+      setConfirmPassword('');
+      setTermsAccepted(false);
+      // ... reset other form fields as needed
+    };
 
     // State variables for error messages
     const [errors, setErrors] = useState<FormErrors>({});
@@ -88,7 +99,13 @@ export default function SignUp() {
     const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
       event.preventDefault();
       if (validateForm()) {
+        // Log form data to the console
+        console.log('Company Name:', companyName);
+        console.log('Email:', email);
+        console.log('Password:', password);
+
         // Proceed with form submission (e.g., API call)
+        resetForm();
       }
     };
 
@@ -207,7 +224,9 @@ export default function SignUp() {
           <div>
             <p className="space-x-1">
               <span className="text-white">Already a member?</span>
-              <span className="text-blue-600">Login</span>
+              <Link href="/login" legacyBehavior>
+                <a className="text-blue-600 cursor-pointer">Login</a>
+              </Link>
             </p>
           </div>
         </form>
