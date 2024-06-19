@@ -22,7 +22,7 @@ export default function NavBar() {
 
   return (
     <div>
-      <nav className="flex flex-row justify-between items-center py-6 px-6">
+      <nav className="sticky top-0 z-90 bg-white flex flex-row justify-between items-center py-6 px-6">
         <div className="flex gap-12 items-center">
           <img src="/Smartworka.svg" alt="logo" />
           <ul className="flex flex-row space-x-4 text-gray-400 text-base hidden lg:flex">
