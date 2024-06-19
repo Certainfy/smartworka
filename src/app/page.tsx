@@ -9,11 +9,10 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { MoveRight } from "lucide-react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import { tabs } from "@/constant/tabsData";
 import { labelImg } from "@/constant/imageData";
-import { motion, useScroll, useTransform } from "framer-motion"
 import Linelayout from "@/components/ui/line-layout";
 import NavBar from "@/components/navBar";
 import { useRouter } from "next/navigation";
@@ -26,8 +25,7 @@ export default function Home() {
     router.push("/signup");
   }
   return (
-    < 
-    >
+    <>
       <NavBar/>
       <Linelayout>
       <header id="about"  className="relative z-10 flex flex-col gap-10 items-center py-24">
