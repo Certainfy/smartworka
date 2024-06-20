@@ -1,7 +1,8 @@
+'use client'
 import { Card } from "@/components/ui/card";
 import { DatePicker } from "./components/date-picker";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import React from "react";
+import LineChart from "./components/line-chart";
 
 export default function Page() {
   return (
@@ -66,9 +67,9 @@ export default function Page() {
           </section>
         </Card>
       </section>
-      <section>
-        <Card>
-          <h1>Hello</h1>
+      <section className="py-6">
+        <Card className="px-6 w-full">
+         <LineChart/>
         </Card>
       </section>
     </main>
