@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { NavItem } from "../nav-item";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
- 
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+
 import HomeIcon from "@/components/icons/home";
 import ShieldIcon from "@/components/icons/shield";
 import CubeIcon from "@/components/icons/cube";
@@ -14,8 +10,8 @@ import TransferIcon from "@/components/icons/transfer";
 import InvoiceIcon from "@/components/icons/invoice";
 import AchieveIcon from "@/components/icons/achieve";
 import LightningIcon from "@/components/icons/lightning";
-import { Card, CardContent } from "@/components/ui/card";
-import { LogOut } from "lucide-react";
+import { Bell, LogOut } from "lucide-react";
+import UserIcon from "@/components/icons/user";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -35,15 +31,18 @@ export default function DashboardLayout({
   return (
     <html lang="en" className="h-full">
       <body>
-          <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
+        <div className="grid border-t-8 border-blue-800 min-h-screen w-full lg:grid-cols-[280px_1fr]">
           <div className="hidden border-r bg-[#051537] lg:block">
             <div className="flex h-full max-h-screen flex-col gap-2">
               <div className="flex h-[60px] items-center px-5">
-              <img src="/smartworka-white.svg" className="w-52 py-4 mx-auto" />
+                <img
+                  src="/smartworka-white.svg"
+                  className="w-52 py-4 mx-auto"
+                />
               </div>
               <div className="flex-1 overflow-auto py-2">
                 <nav className="grid items-start px-4 text-sm font-medium">
-                <NavItem href="/user-dashboard/compliance">
+                  <NavItem href="/user-dashboard/compliance">
                     <ShieldIcon />
                     Compliance
                   </NavItem>
@@ -73,38 +72,45 @@ export default function DashboardLayout({
                   </NavItem>
                 </nav>
                 <section className="pt-10">
-                <div className="px-2">
-                  <NavItem href="/user-dashboard/support">
-                    <AchieveIcon />
-                    Support
-                  </NavItem>
-                  <NavItem href="/user-dashboard/settings">
-                    <LightningIcon />
-                    Settings
-                  </NavItem>
-                </div>
-                <div className="flex  justify-between items-center px-8 pt-4">
-                  <section className="flex items-center space-x-2">
-                  <Avatar>
-                    <AvatarImage
-                      src="/reveiw-1.png"
-                      alt="@smartworka"
-                    />
-                  </Avatar>
-                  <article className="text-white text-xs">
-                    <p>Edwin Eyo</p>
-                    <p>edwin@gmail.com</p>
-                  </article>
-                  </section>
-                  <LogOut className="w-6 h-6 text-white"/>
-                </div>
+                  <div className="px-2">
+                    <NavItem href="/user-dashboard/support">
+                      <AchieveIcon />
+                      Support
+                    </NavItem>
+                    <NavItem href="/user-dashboard/settings">
+                      <LightningIcon />
+                      Settings
+                    </NavItem>
+                  </div>
+                  <div className="flex  justify-between items-center px-6 pt-4">
+                    <section className="flex items-center space-x-2">
+                      <Avatar>
+                        <AvatarImage
+                          src="/reveiw-1.png"
+                          alt="@smartworka"
+                          className=" object-cover "
+                        />
+                      </Avatar>
+                      <article className="text-white text-xs">
+                        <p>Edwin Eyo</p>
+                        <p>edwin@gmail.com</p>
+                      </article>
+                    </section>
+                    <LogOut className="size-6 text-white" />
+                  </div>
                 </section>
               </div>
             </div>
           </div>
           <div className="flex flex-col">
-            <header className="flex h-14 lg:h-[60px] items-center gap-4 border-b-[1.5px] bg-white px-6 justify-between lg:justify-end">
-            
+            <header className="flex h-14 lg:h-[60px] items-center gap-4 bg-white px-6 justify-between lg:justify-end">
+              
+              <figure className="flex gap-6 items-center">
+                <Bell className="text-blue-500 size-6" />
+                <span className="bg-blue-50 rounded-full p-2 size-10">
+                  <UserIcon />
+                </span>
+              </figure>
             </header>
             {children}
           </div>
