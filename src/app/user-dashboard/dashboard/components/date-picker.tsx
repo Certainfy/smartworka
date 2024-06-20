@@ -37,7 +37,7 @@ export function DatePicker() {
           {date ? format(date, "PPP") : <span>Pick a date</span>}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="flex w-auto flex-col space-y-2 p-2">
+      <PopoverContent className="bg-white flex w-auto flex-col space-y-2 p-2">
         <Select
           onValueChange={(value) =>
             setDate(addDays(new Date(), parseInt(value)))
@@ -46,14 +46,14 @@ export function DatePicker() {
           <SelectTrigger>
             <SelectValue placeholder="Select" />
           </SelectTrigger>
-          <SelectContent position="popper">
+          <SelectContent position="popper" className="bg-white">
             <SelectItem value="0">Today</SelectItem>
             <SelectItem value="1">Tomorrow</SelectItem>
             <SelectItem value="3">In 3 days</SelectItem>
             <SelectItem value="7">In a week</SelectItem>
           </SelectContent>
         </Select>
-        <div className="rounded-md border">
+        <div className="rounded-md border bg-white">
           <Calendar mode="single" selected={date} onSelect={setDate} />
         </div>
       </PopoverContent>

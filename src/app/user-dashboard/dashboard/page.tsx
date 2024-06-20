@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { DatePicker } from "./components/date-picker";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import React from "react";
@@ -13,11 +13,11 @@ export default function Page() {
             You are currently using a business account
           </p>
         </article>
-        <article className="flex justify-between items-center">
+        <article className="flex justify-between items-center px-3">
           <div>
           <h1 className="text-2xl">Overview</h1>
           </div>
-          <DatePicker/>
+          <DatePicker/> 
         </article>
       </section>
       <section className="grid grid-cols-4 gap-4 py-6">
@@ -64,6 +64,11 @@ export default function Page() {
               2% increase from last month
             </span>
           </section>
+        </Card>
+      </section>
+      <section>
+        <Card>
+          <h1>Hello</h1>
         </Card>
       </section>
     </main>
