@@ -1,7 +1,7 @@
 'use client'
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Stepper from "@/components/stepper";
+import Stepper from "./components/stepper";
 import React, { useState } from "react";
 
 
@@ -45,11 +45,13 @@ const businessData = [
   },
 ];
 
+
+
   return (
     <>
     {currentView === 'Home' && 
      <div className="px-14">
-     <article className="py-8">
+     <article className="py-4">
        <h2 className="text-3xl">Hello, Edwin</h2>
        <p className="text-sm text-gray-400">
          You are yet to complete your KYC verification to start using wallet
@@ -61,10 +63,10 @@ const businessData = [
        </CardHeader>
        <CardContent className=" space-y-4">
          {businessData.map((data) => (
-           <section className="h-24 w-full bg-gray-100 rounded-md" key={data.id}>
+           <section className="h-24 w-full bg-blue-50 rounded-md" key={data.id}>
              <article className="flex items-center justify-between py-6 px-4">
                <section className="flex items-center gap-2">
-                 <div className="w-12 h-12 p-2 bg-white rounded-full">
+                 <div className=" size-14 p-4 bg-white rounded-full">
                    <img src={data.icon} alt='icons'/>
                  </div>
                  <section>

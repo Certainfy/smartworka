@@ -1,16 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import {businessCategories} from '@/constant/dashData'
 
-const categories = [
-  "Marketing",
-  "Education",
-  "Product management",
-  "Finance",
-  "Health",
-  "Resources",
-  "Nonprofits",
-  "More...",
-];
 
 const BusinessStepThird: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -21,14 +12,14 @@ const BusinessStepThird: React.FC = () => {
 
   return (
     <div>
-      <article className="py-6">
+      <article className="space-y-6">
         <h2 className="text-3xl">Select what you'd like to manage first</h2>
         <p className=" text-gray-500 text-md">
           You can always add more in the future
         </p>
       </article>
       <div className="flex flex-wrap space-x-2 space-y-2">
-        {categories.map((category, index) => (
+        {businessCategories.map((category, index) => (
           <label
             key={index}
             className={`flex items-center px-4 py-2 space-x-2 border rounded-full cursor-pointer transition ${
@@ -49,6 +40,7 @@ const BusinessStepThird: React.FC = () => {
           </label>
         ))}
       </div>
+      
     </div>
   );
 };

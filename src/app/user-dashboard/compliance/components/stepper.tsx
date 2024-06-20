@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import BusinessStepFirst from "./businessStepFirst";
 import BusinessStepSecond from "./businessStepSecond";
 import BusinessStepThird from "./businessStepThird";
-import { Button } from "./ui/button";
 
 interface Step {
   label: string;
@@ -74,7 +73,7 @@ const Stepper: React.FC = ({ children }: any) => {
         {currentStep === steps.length - 1 ? (
           <button
             className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
-            // onClick={handleNext}
+            
           >
             Submit
           </button>
