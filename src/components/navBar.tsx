@@ -25,7 +25,7 @@ export default function NavBar() {
       <nav className="sticky top-0 z-90 bg-white flex flex-row justify-between items-center py-6 px-6">
         <div className="flex gap-12 items-center">
           <img src="/Smartworka.svg" alt="logo" />
-          <ul className="flex flex-row space-x-4 text-gray-400 text-base hidden lg:flex">
+          <ul className="flex-row space-x-4 text-gray-400 text-base hidden lg:flex">
             <li className="text-gray-400 hover:text-blue-600">
               <Link href="#about" legacyBehavior>
                 <a>About</a>

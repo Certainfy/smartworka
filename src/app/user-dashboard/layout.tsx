@@ -29,9 +29,9 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
-      <body>
-        <div className="grid border-t-8 border-blue-800 min-h-screen w-full lg:grid-cols-[280px_1fr]">
+    <html lang="en" className={inter.className}>
+      <body className={inter.className}>
+        <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
           <div className="hidden border-r bg-[#051537] lg:block">
             <div className="flex h-full max-h-screen flex-col gap-2">
               <div className="flex h-[60px] items-center px-5">
