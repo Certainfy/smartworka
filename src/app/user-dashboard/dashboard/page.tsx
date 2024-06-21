@@ -1,14 +1,93 @@
 'use client'
-import { Card } from "@/components/ui/card";
+import { Card,CardTitle,CardContent,CardHeader,CardDescription } from "@/components/ui/card";
 import { DatePicker } from "./components/date-picker";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import LineChart from "./components/line-chart";
+import { MdOutlineMoreVert } from "react-icons/md";
+
+
+const tableData = [
+  {
+    date: 'Feb 05, 2024 | 9:00 AM',
+    customerName: 'Tanimowo Adeola',
+    gateWay:'Kuda Bank',
+    amount: '₦2,000',
+    category:'Subcription',
+    status:'Pending',
+    icons: <MdOutlineMoreVert />,
+  },
+  {
+    date: 'Feb 05, 2024 | 9:00 AM',
+    customerName: 'Tanimowo Adeola',
+    gateWay:'Kuda Bank',
+    amount: '₦2,000',
+    category:'Subcription',
+    status:'Pending',
+    icons: <MdOutlineMoreVert />,
+  },
+    {
+    date: 'Feb 05, 2024 | 9:00 AM',
+    customerName: 'Tanimowo Adeola',
+    gateWay:'Kuda Bank',
+    amount: '₦2,000',
+    category:'Subcription',
+    status:'Pending',
+    icons: <MdOutlineMoreVert />,
+  },
+  {
+    date: 'Feb 05, 2024 | 9:00 AM',
+    customerName: 'Tanimowo Adeola',
+    gateWay:'Kuda Bank',
+    amount: '₦2,000',
+    category:'Subcription',
+    status:'Pending',
+    icons: <MdOutlineMoreVert />,
+  },
+  {
+    date: 'Feb 05, 2024 | 9:00 AM',
+    customerName: 'Tanimowo Adeola',
+    gateWay:'Kuda Bank',
+    amount: '₦2,000',
+    category:'Subcription',
+    status:'Pending',
+    icons: <MdOutlineMoreVert />,
+  },
+  {
+    date: 'Feb 05, 2024 | 9:00 AM',
+    customerName: 'Tanimowo Adeola',
+    gateWay:'Kuda Bank',
+    amount: '₦2,000',
+    category:'Subcription',
+    status:'Pending',
+    icons: <MdOutlineMoreVert />,
+  },
+  {
+    date: 'Feb 05, 2024 | 9:00 AM',
+    customerName: 'Tanimowo Adeola',
+    gateWay:'Kuda Bank',
+    amount: '₦2,000',
+    category:'Subcription',
+    status:'Pending',
+    icons: <MdOutlineMoreVert />,
+  },
+]
 
 export default function Page() {
   return (
-    <main className="px-8">
-      <section className="space-y-3">
-        <article>
+
+    <ScrollArea className="px-4 h-[90vh] rounded-md border">
+      <main>
+        <section className="space-y-3">
+        <article className="pt-3">
           <h1 className="text-lg text-blue-700">Hello, Edwin</h1>
           <p className="text-sm text-gray-400">
             You are currently using a business account
@@ -67,11 +146,74 @@ export default function Page() {
           </section>
         </Card>
       </section>
-      <section className="py-6">
-        <Card className="px-6 w-full">
+      <section className="py-3">
+        <Card className="px-6 py-6">
          <LineChart/>
         </Card>
       </section>
-    </main>
+      <section>
+          <Card>
+                  <CardHeader className="px-7">
+                    <CardTitle></CardTitle>
+                    <CardDescription>
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Table>
+                      <TableHeader>
+                        <TableRow>
+                          <TableHead className="text-gray-400 sm:table-cell">Date | Time</TableHead>
+                          <TableHead className="text-gray-400 sm:table-cell">
+                            Customer Name
+                          </TableHead>
+                          <TableHead className=" text-gray-400 sm:table-cell">
+                            Gateway
+                          </TableHead>
+                          <TableHead className="text-gray-400 md:table-cell">
+                            Amount
+                          </TableHead>
+                          <TableHead className=" text-gray-400 md:table-cell">
+                            Category
+                          </TableHead>
+                          <TableHead className=" text-gray-400 md:table-cell">
+                            Status
+                          </TableHead>
+                          <TableHead className="text-right sr-only">Option</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                {tableData.map((data) => (
+                        <TableRow className="bg-accent" key={data.date}>
+                          <TableCell>
+                            <div className=" text-gray-400">{data.date}</div> 
+                          </TableCell>
+                          <TableCell className="sm:table-cell">
+                            {data.customerName}
+                          </TableCell>
+                          <TableCell className="sm:table-cell">
+                           <div className=" text-gray-400">{data.gateWay}</div>
+                          </TableCell>
+                         <TableCell className="sm:table-cell">
+                           <div className=" text-blue-700">{data.amount}</div>
+                          </TableCell>
+                          <TableCell className="sm:table-cell">
+                           <div className=" text-gray-400">{data.category}</div>
+                          </TableCell>
+                          <TableCell className="sm:table-cell">
+                             <div className="bg-orange-100 text-orange-400 w-fit px-2 py-2 text-xs rounded">
+                              {data.status}
+                             </div>
+                          </TableCell>
+                          <TableCell className="text-right">
+                           {data.icons}
+                    </TableCell>
+                        </TableRow> ))}
+                      </TableBody>
+                    </Table>
+                  </CardContent>
+                </Card>
+      </section>
+</main>
+</ScrollArea>
   );
 }
